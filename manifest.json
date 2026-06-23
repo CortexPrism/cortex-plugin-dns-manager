@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-dns-manager",
-  "version": "1.0.0",
-  "description": "DNS & Traffic Manager — Route53/Cloudflare/Namecheap DNS management, subdomain provisioning, failover configuration",
+  "version": "1.0.1",
+  "description": "DNS & Traffic Manager \u2014 Route53/Cloudflare/Namecheap DNS management, subdomain provisioning, failover configuration",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,18 +9,40 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-dns-manager",
   "homepage": "https://cortexprism.io/marketplace/plugins/dns-manager",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
-    { "name": "dns_list_zones", "description": "List DNS zones", "params": [] },
-    { "name": "dns_create_record", "description": "Create DNS record", "params": [] },
+    {
+      "name": "dns_list_zones",
+      "description": "List DNS zones",
+      "params": []
+    },
+    {
+      "name": "dns_create_record",
+      "description": "Create DNS record",
+      "params": []
+    },
     {
       "name": "dns_subdomain",
       "description": "Provision subdomain for preview deployment",
       "params": []
     },
-    { "name": "dns_verify_propagation", "description": "Verify DNS propagation", "params": [] }
+    {
+      "name": "dns_verify_propagation",
+      "description": "Verify DNS propagation",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
